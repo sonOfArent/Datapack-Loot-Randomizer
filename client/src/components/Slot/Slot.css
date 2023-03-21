@@ -16,3 +16,7 @@
   background-color: var(--background-active);
   cursor: pointer;
 }
+
+.Slot.true {
+  background-color: var(--background-active);
+}

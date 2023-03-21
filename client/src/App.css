@@ -1,5 +1,18 @@
 .App {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Slot-windows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Settings-window {
+  display: flex;
   justify-content: center;
   align-items: center;
 }

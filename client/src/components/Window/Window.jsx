@@ -1,8 +1,16 @@
 import React from 'react'
+import './Window.css'
 
-const Window = () => {
+const Window = ({ children, type }) => {
   return (
-    <div>Window</div>
+    <div className='Window'>
+      <div className="title">
+        {type || "Title"}
+      </div>
+      <div className="slots">
+        {children}
+      </div>
+    </div>
   )
 }
 

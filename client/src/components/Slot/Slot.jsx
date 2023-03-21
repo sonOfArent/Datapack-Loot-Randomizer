@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './Slot.css'
 
-const Slot = ({ children, isEnabled }) => {
+import ima from '../../assets/images/blocks/sand.png'
+
+// It would be easier to check if the individual slot is clicked here instead of higher up the chain.
+
+// I think the best course of action is to give each slot the ability to determine if it's enabled, and when submitted, a process above will check with every slot and see which were enabled and which were not.
+
+const Slot = ({ image }) => {
+
+  const [isEnabled, setIsEnabled] = useState(false)
+
   return (
-    <div className='Slot'>
-      Slot
+    <div className={`Slot ${isEnabled}`} onClick={() => setIsEnabled(!isEnabled)}>
+      <img src={ima} alt="" srcset="" />
     </div>
   )
 }
