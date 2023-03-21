@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './Slot.css'
 
-import ima from '../../assets/images/blocks/sand.png'
+import ima from '../../assets/images/items/diamond_pickaxe.png'
 
 // It would be easier to check if the individual slot is clicked here instead of higher up the chain.
 
@@ -13,7 +13,9 @@ const Slot = ({ image }) => {
 
   return (
     <div className={`Slot ${isEnabled}`} onClick={() => setIsEnabled(!isEnabled)}>
-      <img src={ima} alt="" srcset="" />
+      <div className="container image">
+        <img src={ima} alt="" srcset="" />
+      </div>
     </div>
   )
 }

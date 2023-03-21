@@ -20,3 +20,7 @@
 .Slot.true {
   background-color: var(--background-active);
 }
+
+.container.image {
+  width: 40px;
+}
