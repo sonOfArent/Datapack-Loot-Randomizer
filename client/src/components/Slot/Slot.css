@@ -1,0 +1,18 @@
+.Slot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--background-inactive);
+  
+  width: var(--slot-width);
+  height: var(--slot-height);
+
+  border: 4px;
+  border-style: ridge;
+}
+
+.Slot:hover {
+  background-color: var(--background-active);
+  cursor: pointer;
+}

@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+:root {
+  --window: #c6c6c6;
+  --tab-shadow: #555555;
+
+  --background-inactive: #8b8b8b;
+  --background-active: #c5c5c5;
+  --border-dark: #373737;
+
+  --window-text-color: #3f3f3f;
+
+  --slot-height: 70px;
+  --slot-width: 70px;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -8,6 +22,6 @@
 
 body {
   background-color: #333;
-  color: antiquewhite;
-  font-family: 'Poppins', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: white;
+  font-family: 'minecraftiaregular', 'Poppins', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
