@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './Slot.css'
 
-import ima from '../../assets/images/items/diamond_pickaxe.png'
+import ima from '../../assets/images/blocks/acacia_planks.png'
 
 // It would be easier to check if the individual slot is clicked here instead of higher up the chain.
 
