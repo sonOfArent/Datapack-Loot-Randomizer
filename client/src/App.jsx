@@ -28,7 +28,6 @@ function App() {
     <div className="App">
       <div className="Slot-windows">
         <Window type="Items"> 
-          <Slot image="" isEnabled={true} />
           <Slot />
           <Slot />
           <Slot />
