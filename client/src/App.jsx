@@ -1,11 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react'
+import useEnabledState from './hooks/useEnabledState'
 
 import './App.css'
 import './minecraftia.css'
 
 import Slot from './components/Slot/Slot'
 import Window from './components/Window/Window'
-import ItemGallery from './components/ImageGallery/ItemGallery'
+import Settings from './components/Settings/Settings'
+
+import ItemGallery from './components/ImageGallery/galleries/ItemGallery'
+import BlockGallery from './components/ImageGallery/galleries/BlockGallery'
+import MobGallery from './components/ImageGallery/galleries/MobGallery'
+
 
 // #TODO: generate files like ItemGallery for BlockGallery and MobGallery. I would do it now but by god I need to sleep.
 
@@ -13,14 +19,13 @@ import ItemGallery from './components/ImageGallery/ItemGallery'
 
 function App() {
 
-  const [itemsEnabled, setItemsEnabled] = useState({})
+  const [itemsEnabled, updateItemsEnabled] = useEnabledState('itemsEnabled');
+  const [blocksEnabled, updateBlocksEnabled] = useEnabledState('blocksEnabled');
+  const [mobsEnabled, updateMobsEnabled] = useEnabledState('mobsEnabled');
 
-  const updateItemsEnabled = (key, newValue) => {
-    setItemsEnabled(previous => ({
-      ...previous,
-      [key]: newValue
-    }))
-  }
+  useEffect(() => {
+    console.log(itemsEnabled, blocksEnabled, mobsEnabled)
+  }, [itemsEnabled, blocksEnabled, mobsEnabled])
 
   return (
     <div className="App">
@@ -29,14 +34,20 @@ function App() {
           <ItemGallery updateItemsEnabled={updateItemsEnabled} />
         </Window>
         <Window type="Blocks">
+          <BlockGallery updateBlocksEnabled={updateBlocksEnabled} />
         </Window>
         <Window type="Mobs">
-
+          <MobGallery updateMobsEnabled={updateMobsEnabled} />
         </Window>
-        <button onClick={() => console.log(itemsEnabled)}></button>
       </div>
       <div className="Settings-window">
-        Settings box
+        <Settings 
+          itemsEnabled={itemsEnabled} 
+          blocksEnabled={blocksEnabled} 
+          mobsEnabled={mobsEnabled} 
+          updateItemsEnabled={updateItemsEnabled} 
+          updateBlocksEnabled={updateBlocksEnabled} 
+          updateMobsEnabled={updateMobsEnabled} />
       </div>
     </div>
   )

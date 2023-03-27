@@ -1,0 +1,16 @@
+.SelectAllButton {
+  font-family: "minecraftiaregular";
+  margin-left: 20px;
+  font-size: 15px;
+  padding: 10px;
+  background-color: var(--background-inactive);
+  border-style: ridge;
+}
+
+.SelectAllButton.true {
+  background-color: var(--background-active);
+}
+.SelectAllButton:hover {
+  background-color: var(--background-active);
+  cursor: pointer;
+}
